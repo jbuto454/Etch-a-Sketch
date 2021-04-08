@@ -1,13 +1,19 @@
 const container = document.querySelector('#container');
 
-const div = document.createElement('div');
-container.appendChild(div);
-div.setAttribute('id', '1'); 
+function createDivs() {
+    for (i=0;i<16;i++) {
+        const divi = document.createElement('div');
+        container.appendChild(divi);
+        divi.setAttribute('id', i); 
+        divi.style.cssText = "background-color: black";
+    }
+}
 
+createDivs();
 
 container.style.display = 'grid';
-container.style.gridTemplateRows= "25px 25px 25px 25px";
-container.style.gridTemplateColumns= "25px 25px 25px 25px";
+container.style.gridTemplateRows= "100px 100px 100px 100px";
+container.style.gridTemplateColumns= "100px 100px 100px 100px";
 
 
 
