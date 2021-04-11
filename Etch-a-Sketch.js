@@ -12,18 +12,29 @@ function createDivs(n) {
     }
 }
 
+//Removes divs from the container
+function removeDivs(n) {
+  for (i=0;i<n;i++) {
+      const divi = document.getElementById("d" + i);
+      container.removeChild(divi);
+  }
+}
+
 //Creates a grid in the container element
   container.style.display = 'grid';
 
-function gridRows(n) {
+function gridRowsColumns(n) {
   container.style.gridTemplateRows= `repeat(${n}, 1fr)`;
   container.style.gridTemplateColumns= `repeat(${n}, 1fr)`;
 }
 
-gridRows(20);
+function createGrid(n) {
+  gridRowsColumns(n);
+  createDivs(n*n);
+}
 
-createDivs(400);
-
+let gridNumber = 5;
+createGrid(gridNumber);
 
 //Changes the color of a div in the grid when you hover over it
 const divColor = document.querySelectorAll('div.changeColor');
@@ -49,8 +60,17 @@ function erase() {
   divColor.forEach(eraseDivs);
 }
 
+//add button to erase the grid and start over
 const erasebtn = document.querySelector("#erase");
 erasebtn.addEventListener('click', function() {erase()});
+
+
+//add button to change the size of the grid
+function promptMe(gridNumber){
+  removeDivs(gridNumber*gridNumber);
+  let gridNumber = prompt("Please enter a number between 1 and 100");
+  createGrid(gridNumber);
+}
 
 
 
