@@ -8,5 +8,31 @@
     width: 600px;
     height: 400px;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+.head {
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.buttons {
+    justify-content: left;
+    display: flex;
+    width: 600px;
+    position: absolute;
+    left: 20%;
+}
+
+.buttonColor {
+    border-color: white;
+    border-width: 3px;
+    margin-left: 3%;
+    border-radius: 5px;
+}
+
+.background {
+    background-color: crimson;
 }
