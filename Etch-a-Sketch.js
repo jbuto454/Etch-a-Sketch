@@ -29,8 +29,8 @@ function gridRowsColumns(n) {
 }
 
 function createGrid(n) {
-  gridRowsColumns(n);
   createDivs(n*n);
+  gridRowsColumns(n);
 }
 
 //sets the intial grid number and creates grid
@@ -68,8 +68,8 @@ erasebtn.addEventListener('click', function() {erase()});
 
 
 //add button to change the size of the grid
-function promptMe(gridNumber){
-    removeDivs(gridNumber*gridNumber);
+function promptMe(){
+    removeDivs((gridNumber)*(gridNumber));
     gridNumber = prompt("Please enter a number between 1 and 50");
     while (gridNumber > 50) {
       gridNumber = prompt("Please enter a number between 1 and 50");
