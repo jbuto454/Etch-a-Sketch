@@ -48,7 +48,7 @@ function colorDivs(div) {
       })
       
   div.addEventListener('mouseout', function(){
-    div.style.cssText = "background-color: pink";
+    div.style.cssText = "background-color: white";
       })
 }
 
@@ -71,7 +71,7 @@ erasebtn.addEventListener('click', function() {erase()});
 function promptMe(){
     removeDivs((gridNumber)*(gridNumber));
     gridNumber = prompt("Please enter a number between 1 and 50");
-    while (gridNumber > 50) {
+    while (gridNumber > 100) {
       gridNumber = prompt("Please enter a number between 1 and 50");
     }
     createGrid(gridNumber);
