@@ -70,9 +70,9 @@ erasebtn.addEventListener('click', function() {erase()});
 //add button to change the size of the grid
 function promptMe(){
     removeDivs((gridNumber)*(gridNumber));
-    gridNumber = prompt("Please enter a number between 1 and 50");
+    gridNumber = prompt("Please enter a number between 1 and 100");
     while (gridNumber > 100) {
-      gridNumber = prompt("Please enter a number between 1 and 50");
+      gridNumber = prompt("Please enter a number between 1 and 100");
     }
     createGrid(gridNumber);
     const divColor = document.querySelectorAll('div.changeColor');
