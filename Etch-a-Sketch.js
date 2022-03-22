@@ -48,7 +48,7 @@ function colorDivs(div) {
       })
       
   div.addEventListener('mouseout', function(){
-    div.style.cssText = "background-color: white";
+    div.style.cssText = "background-color: red";
       })
 }
 
